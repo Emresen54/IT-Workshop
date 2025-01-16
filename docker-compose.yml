@@ -1,0 +1,29 @@
+version: "1.0"
+
+services:
+    mysql:
+        image: mysql:latest
+        restart: always
+        environment:
+            - MYSQL_ROOT_PASSWORD=supersecret1234
+            - MYSQL_DATABASE=jeevesplace
+            - MYSQL_USER=jeevesplace
+            - MYSQL_PASSWORD=supersecret1234
+        ports:
+            - "5432:5432"
+
+    phppmyadmin:
+        image: phpmyadmin/phpmyadmin
+        depends_on:
+            - mysql
+        restart: always
+        environment:
+            - PMA_DEFAULT_EMAIL=jeevesplace`@`localhost
+            - PMA_HOST=mysql
+            - PMA_PORT=4306
+            - MYSQL_ROOT_PASSWORD=supersecret1234
+        ports:
+            - "9200:80"
+
+volumes:
+    jeevesplace:

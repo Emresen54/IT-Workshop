@@ -1,0 +1,31 @@
+{
+  "name": "it-workshop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": {
+    "name": "Nezir Emre Sen"
+  },
+  "scripts": {
+    "start": "node server/app.js",
+    "lint": "eslint server",
+    "format": "prettier --write server",
+    "test": "jest",
+    "dev": "node server/app.js"
+  },
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.2",
+    "express": "^4.21.2",
+    "mysql": "^2.18.1",
+    "pg": "^8.13.1",
+    "php": "^1.1.0",
+    "php-express": "^0.0.3",
+    "prettier": "^3.4.2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
